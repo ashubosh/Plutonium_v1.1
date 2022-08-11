@@ -44,24 +44,53 @@ router.post('/players', function (req, res) {
     for(let i = 0; i < players.length; i++) {
         if(players[i].name == newPlayersName) {
             flag = true;
-        //    break;
-    //    }
-    //}
-
-    //undefined is same as false/ a falsy value
-//    if (flag) {
-        //Player exists
+        
         res.send("This player was already added!")
     } else {
-        //New entry
+        
         players.push(newPlayer)
         res.send(players)
     }
 }
 });
-      
 
 
+
+
+// write a Post API 
+let persons = [
+    {
+        name: "PK",
+        age: 10,
+        votingStatus: false
+    },
+    {
+        name: "SK",
+        age: 20,
+        votingStatus: false
+    },
+    {
+        name: "AA",
+        age: 70,
+        votingStatus: false
+    },
+    {
+        name: "SC",
+        age: 5,
+        votingStatus: false
+    },
+    {
+        name: "HO",
+        age: 40,
+        votingStatus: false
+    }
+]
+
+router.post('/VotingStatus', function (req, res) {  
+    const input=req.query.input;
+    const eligiblePersons=persons.filter(ele=>ele.age>input? ele.votingStatus=true : ele.votingStatus=false)
+    res.send(eligiblePersons)
+})
 
     
 
