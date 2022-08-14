@@ -1,10 +1,24 @@
 const express = require('express');
 const myHelper = require('../util/helper')
 const underscore = require('underscore')
+const UserModels= require("../models/userModels")
+const UserController = require("../Controller/userController")
 
 const router = express.Router();
 
-router.get('/test-me', function (req, res) {
+
+
+
+
+
+
+
+
+
+
+
+
+/*router.get('/test-me', function (req, res) {
     myHelper.printDate()
     myHelper.getCurrentMonth()
     myHelper.getCohortData()
@@ -35,7 +49,6 @@ router.get('/candidates/:canidatesName', function(req, res){
     console.log('Candidates name is '+req.params.canidatesName)
     res.send('Done')
 })
-
+*/
 
 module.exports = router;
-// adding this comment for no reason
