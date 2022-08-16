@@ -13,7 +13,7 @@ router.get("/getBooksData", userController.getBooksData)
     myHelper.printDate()
     myHelper.getCurrentMonth()
     myHelper.getCohortData()
-    let firstElement = underscore.first(['Sabiha','Akash','Pritesh'])
+    let firstElement = underscore.first(['Sabiha','Akash','Pritesh'])git 
     console.log('The first element received from underscope function is '+firstElement)
     res.send('My first ever api!')
 });
