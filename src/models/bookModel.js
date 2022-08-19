@@ -5,13 +5,15 @@ const bookSchema = new mongoose.Schema( {
     name: String,
     author: {
         type: ObjectId,
-        ref: "newAuthor"
+        ref: "newAuthor",
+        required: true
     }, 
     price: Number,
     ratings: Number,
     publisher: {
         type: ObjectId,
-        ref: "newPublisher"
+        ref: "newPublisher",
+        required: true
     }
 
 }, { timestamps: true });

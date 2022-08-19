@@ -4,6 +4,11 @@ const publisherModel= require("../models/publisherModel")
 
 const createBooks= async function (req, res) {
     let book = req.body
+    let authorId = book.author
+    if (!authorId)
+    {
+     return  res.send( {msg: "Id is required"} )
+    }
     let bookCreated = await bookModel.create(book)
     res.send({data: bookCreated})
 }
