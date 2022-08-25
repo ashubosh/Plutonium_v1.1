@@ -1,3 +1,4 @@
+const moment = require('moment')
 
 const mid1= function ( req, res, next) {
     req.falana= "hi there. i am adding something new to the req object"
@@ -7,6 +8,9 @@ const mid1= function ( req, res, next) {
 
 const mid2= function ( req, res, next) {
     console.log("Hi I am a middleware named Mid2")
+    console.log (moment().format('HH:mm:ss'))
+        console.log(req.ip)
+        console.log(req.originalUrl)
     next()
 }
 
