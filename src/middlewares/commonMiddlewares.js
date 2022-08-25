@@ -8,7 +8,7 @@ const mid1= function ( req, res, next) {
 
 const mid2= function ( req, res, next) {
     console.log("Hi I am a middleware named Mid2")
-    console.log (moment().format('HH:mm:ss'))
+    console.log (new Date())
         console.log(req.ip)
         console.log(req.originalUrl)
     next()
