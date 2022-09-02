@@ -1,6 +1,11 @@
 const express = require('express');
 const router = express.Router();
 const CowinController= require("../controllers/cowinController")
+const weatherController = require('../controllers/weatherController')
+
+router.get("/weather-London", weatherController.weatherLondon)
+
+router.get("/shorted-cities",weatherController.shortedCities)
 
 
 
